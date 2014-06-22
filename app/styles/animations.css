@@ -1,0 +1,24 @@
+/* line 3, animations.scss */
+.project {
+  -webkit-transition: all linear 0.8s;
+  -moz-transition: all linear 0.8s;
+  -ms-transition: all linear 0.8s;
+  -o-transition: all linear 0.8s;
+  transition: all linear 0.8s;
+}
+/* line 10, animations.scss */
+.project.project-ng-leave.project-ng-enter-active {
+  opactiy: 1;
+}
+/* line 14, animations.scss */
+.project.project-ng-enter.project-ng-leave-active {
+  opactiy: 0;
+}
+/* line 19, animations.scss */
+.project .code-button a {
+  color: white;
+}
+/* line 22, animations.scss */
+.project .code-button a:hover {
+  color: red;
+}

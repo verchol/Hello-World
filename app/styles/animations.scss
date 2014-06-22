@@ -1,0 +1,42 @@
+$shakeTime: 0.8s;
+
+.project {
+	-webkit-transition:all linear $shakeTime;
+	-moz-transition:all linear $shakeTime;
+    -ms-transition:all linear $shakeTime;
+    -o-transition:all linear $shakeTime;
+    transition:all linear $shakeTime;
+	 
+	&.project-ng-leave.project-ng-enter-active {
+		opactiy: 1;
+	}
+
+	&.project-ng-enter.project-ng-leave-active {
+		opactiy: 0;
+	}
+
+	.code-button  {
+		a {
+			color: white;
+
+			&:hover { color: red; } 
+		}
+	}
+}
+
+// @-webkit-keyframes spaceboots {
+// 	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+// 	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+// 	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+// }
+// .shake:hover,
+// .shake:focus {
+// 	-webkit-animation-name: spaceboots;
+// 	-webkit-animation-duration: $shakeTime;
+// 	-webkit-transform-origin:50% 50%;
+// 	-webkit-animation-iteration-count: 1;
+// 	-webkit-animation-timing-function: linear;
+// }
+// .shake {
+// 	display:inline-block
+// }

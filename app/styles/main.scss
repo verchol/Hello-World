@@ -1,0 +1,232 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+// pages
+@import "pages/projects.scss";
+@import "pages/new-project.scss";
+@import "pages/environment.scss";
+// endpages
+@import "animations.scss";
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+$bgColor: #dddddd;
+
+/* Space out content a bit */
+body {
+  background-color: $bgColor;
+  background-image: url(/images/background/page.png);
+  background-repeat: no-repeat;
+  background-position: 58% 245px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+@mixin nav-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  line-height: 14px;
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+.container {
+  header {
+    .user-panel {
+      float: left;
+      padding: 15px;
+      margin-right: 15px;
+      margin-bottom: 20px;
+      background-color: #333333;
+      max-width: 320px;
+      min-width: 320px;
+      height: 95px;
+
+      .user-profile-picture {
+        display: inline-block;
+        height: 65px;
+        margin: 0 10px;
+        height: 60px;
+      }
+
+      .user-details {
+        
+        display: inline-block;
+        vertical-align: top;
+
+        .user-name {
+          display: inline-block;
+          color: white;
+          font-size: 30px;
+          line-height: 0.77;
+          margin-bottom: 10px;
+        }
+
+        .user-actions {
+          width: 212px;
+
+          .user-context-menu {
+            float: left;
+            cursor: pointer;
+            background-image: url('/images/icons/user-context-menu.png');
+            background-repeat: no-repeat;
+
+            &:after {
+              clear: both;
+              display: table;
+            }
+          }
+
+          nav {
+            display: inline-block;
+            float: right;
+
+            ul {
+              list-style: none;
+
+              li {
+                float: left;
+                cursor: pointer;
+                margin-right: 10px;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                &:last-child:after {
+                  clear: both;
+                  display: table;
+                }
+              }
+
+              .icon-settings {
+                background-image: url('/images/icons/settings.png');
+              }
+
+              .icon-dashboard {
+                background-image: url('/images/icons/dashboard.png');
+              }
+
+              .icon-user-profile {
+                background-image: url('/images/icons/user.png');
+              }
+
+              .icon-logout {
+                background-image: url('/images/icons/logout.png');
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logo-box {
+      padding-left: 0;
+
+      .company-logo {
+        margin: 10px;
+        float: left;
+        background-image: url('/images/company-logo.png');
+        width: 87px;
+        height: 75px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:after { 
+      clear: both; 
+      content: "";
+      display: table;
+    }
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 23px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+  }
+
+  .music-bar {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 760px) {
+  .container {
+    padding: 0 5px;
+    max-width: 1116px;
+  }     
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

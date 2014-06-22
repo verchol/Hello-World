@@ -1,0 +1,105 @@
+/* line 7, new-project.scss */
+.wizard-main {
+  display: inline-block;
+  max-width: 730px;
+}
+/* line 22, new-project.scss */
+.wizard-main .project-title {
+  border-radius: 5px 5px 0 0;
+  padding: 20px 25px;
+  font-size: 28px;
+  color: white;
+  background-color: #1abc9c;
+  line-height: 1.2;
+}
+/* line 31, new-project.scss */
+.wizard-main .content {
+  background-color: white;
+  padding: 25px 25px;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+/* line 37, new-project.scss */
+.wizard-main .content .get-your-tool-message {
+  display: inline-block;
+  width: 100px;
+  height: 220px;
+  font-size: 18px;
+  vertical-align: top;
+  margin-top: 150px;
+  margin-right: 40px;
+}
+/* line 47, new-project.scss */
+.wizard-main .content .tools-box {
+  display: inline-block;
+  max-width: 560px;
+}
+/* line 51, new-project.scss */
+.wizard-main .content .tools-box .tech-box {
+  display: inline-block;
+  width: 250px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+/* line 57, new-project.scss */
+.wizard-main .content .tools-box .tech-box label, .wizard-main .content .tools-box .tech-box input[type='checkbox'] {
+  cursor: pointer;
+}
+/* line 61, new-project.scss */
+.wizard-main .content .tools-box .tech-box .title {
+  color: white;
+  font-size: 18px;
+  padding: 5px 20px;
+}
+/* line 67, new-project.scss */
+.wizard-main .content .tools-box .tech-box .options {
+  padding: 10px 20px;
+  background-color: #ebebeb;
+}
+/* line 72, new-project.scss */
+.wizard-main .content .tools-box .tech-box.repository .title {
+  background-color: #f1c40f;
+}
+/* line 73, new-project.scss */
+.wizard-main .content .tools-box .tech-box.deployment .title {
+  background-color: #838383;
+}
+/* line 74, new-project.scss */
+.wizard-main .content .tools-box .tech-box.monitoring .title {
+  background-color: #585858;
+}
+/* line 75, new-project.scss */
+.wizard-main .content .tools-box .tech-box.trackingSystems .title {
+  background-color: #3ca1e7;
+}
+/* line 80, new-project.scss */
+.wizard-main .footer {
+  text-align: right;
+  padding-right: 20px;
+  padding: 5px;
+  position: relative;
+  background-color: #1abc9c;
+  border-radius: 0 0 5px 5px;
+}
+/* line 88, new-project.scss */
+.wizard-main .footer .nav {
+  display: inline-block;
+  padding-right: 30px;
+}
+/* line 92, new-project.scss */
+.wizard-main .footer .nav a {
+  font-size: 17px;
+  color: white;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 98, new-project.scss */
+.wizard-main .footer .nav a:visited, .wizard-main .footer .nav a:hover, .wizard-main .footer .nav a:active {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 106, new-project.scss */
+.wizard-main .footer .next-button {
+  margin-right: -20px;
+}

@@ -1,0 +1,9 @@
+/* line 3, environment.scss */
+.env-main .project .project-info {
+  background-color: white;
+}
+/* line 7, environment.scss */
+.env-main .project .indicators {
+  background-color: white;
+  padding: 25px;
+}

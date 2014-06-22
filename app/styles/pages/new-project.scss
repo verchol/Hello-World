@@ -1,0 +1,110 @@
+$newProjectBGColor: #1abc9c;
+
+.wizard-progress-sidebar {
+
+}
+
+.wizard-main {
+	display: inline-block;
+	max-width: 730px;
+
+	// &:before {
+	// 	content: "";
+	// 	position: relative;
+	// 	top: 0;
+	// 	right: 0;
+	// 	border-width: 0 18px 18px 0;
+	// 	border-style: solid;
+	// 	border-color: $bgColor $bgColor #16a085 #16a085;
+	// 	width: 0;
+	// }
+
+	.project-title {
+		border-radius: 5px 5px 0 0;
+		padding: 20px 25px;
+		font-size: 28px;
+		color: white;
+		background-color: $newProjectBGColor;
+		line-height: 1.2;
+	}
+
+	.content {
+		background-color: white;
+		padding: 25px 25px;
+		padding-right: 0;
+		padding-bottom: 0;
+
+		.get-your-tool-message {
+			display: inline-block;
+			width: 100px;
+			height: 220px;
+			font-size: 18px;
+			vertical-align: top;
+			margin-top: 150px;
+			margin-right: 40px;
+		}
+
+		.tools-box {
+			display: inline-block;
+			max-width: 560px;
+
+			.tech-box {
+				display: inline-block;
+				width: 250px;
+				margin-right: 20px;
+				margin-bottom: 30px;
+
+				label, input[type='checkbox'] {
+					cursor: pointer;
+				}
+
+				.title {
+					color: white;
+					font-size: 18px;
+					padding: 5px 20px;
+				}
+
+				.options {
+					padding: 10px 20px;
+					background-color: #ebebeb;
+				}
+
+				&.repository .title { background-color: #f1c40f; }
+				&.deployment .title { background-color: #838383; }
+				&.monitoring .title { background-color: #585858; }
+				&.trackingSystems .title { background-color: #3ca1e7; }
+			}
+		}
+	}
+
+	.footer {
+		text-align: right;
+		padding-right: 20px;
+		padding: 5px;
+		position: relative;
+		background-color: $newProjectBGColor;
+		border-radius: 0 0 5px 5px;
+
+		.nav {
+		  	display: inline-block;
+		  	padding-right: 30px;
+
+		  	a {
+		  		font-size: 17px;
+		  		color: white;
+		  		padding: 8px;
+		  		background-color: rgba(0, 0, 0, 0.3);
+
+		  		&:visited, &:hover, &:active { 
+					color: white;
+					text-decoration: none;
+					cursor: pointer;
+				}
+		  	}
+	  	}
+
+		.next-button {
+	  		margin-right: -20px;
+	  	}
+	}
+}

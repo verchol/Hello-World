@@ -1,0 +1,45 @@
+<ul class="projects-list">
+	<li class="project" ng-repeat="project in mv.projects"
+	    ng-style="{ 'background-color': project.color }" ng-class="{ 'shake': showNotifications }"
+	    ng-mouseover="showNotifications = true" ng-mouseleave="showNotifications = false">
+	    <div class="notifications" ng-show="project.numNotifications"
+	    	 ng-class="{ 'up': showNotifications }">{{ project.numNotifications }}</div>
+		<div class="title-and-icon">
+			<div class="title">{{ project.title }}</div>
+			<div class="icon" ng-show="project.icon">
+				<img ng-src="{{ project.icon }}"/>
+			</div>
+		</div>
+		<div class="project-info">
+				<div>Pending tasks: {{ project.pendingTasks }}</div>
+			<div>
+				<div class="last-build">Last build: {{ project.lastBuild | amDateFormat:'M/DD/YY h:mm':'unix' }}</div>
+				<div class="build-success" ng-show="project.buildSuccess">{{ project.buildSuccess | success }}</div>
+			</div>
+		</div>
+		<div class="project-info-footer">
+			<nav class="project-actions">
+	        	<ul>
+		          <li><a ng-href="#"><i class="icon-project-dashboard"></i></a></li>
+		          <li><a ui-sref="environments"><i class="icon-project-cloud"></i></a></li>
+		          <li><a ng-href="#"><i class="icon-project-settings"></i></a></li>
+		        </ul>
+	      	</nav>
+	      	<div class="project-progress">
+      			<div class="progress-bar" ng-style="{ width: project.progress * 100 + '%' }"></div>
+	      	</div>
+	      	<div class="code-button">
+	      		<a ui-sref="ide">CODE</a>
+	      	</div>
+		</div>
+	</li>
+	<li class="dont-break">
+		<a ui-sref="new-project">
+			<div class="project add-new">
+				<div class="white-plus"></div>
+				<div class="new-project-btn">New project</div>
+			</div>
+		</a>
+	</li>
+</ul>
+<a class="btn btn-inverse new-project" href="/new-project">New Project</a>

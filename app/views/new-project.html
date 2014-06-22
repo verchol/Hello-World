@@ -1,0 +1,77 @@
+<div class="wizard-progress-sidebar">
+
+</div>
+
+<div class="wizard-main">
+	<div class="project-title">{{ mv.project.title }}</div>
+	<div class="content">
+		<div class="get-your-tool-message">Get your tool chain right...</div>
+		<div class="tools-box">
+			<div class="tech-box repository">
+				<div class="title">Code Repository</div>
+				<div class="options">
+					<div ng-repeat="repo in repositories">
+						<input
+							id="repository{{ repo.id }}"
+						    type="checkbox"
+						    name="repository[]"
+						    value="{{ repo.id }}"
+						    ng-checked="isInList(mv.project.tools.repository, repo)"
+						    >
+						<label for="repository{{ repo.id }}">{{ repo.label }}</label>
+					</div>
+				</div>
+			</div>
+			<div class="tech-box deployment">
+				<div class="title">Deployment Env.</div>
+				<div class="options">
+					<div ng-repeat="deployment in deployments">
+						<input
+							id="deployment{{ deployment.id }}"
+						    type="checkbox"
+						    name="deployment[]"
+						    value="{{ deployment.id }}"
+						    ng-checked="isInList(mv.project.tools.deployment, deployment)">
+						<label for="deployment{{ deployment.id }}">{{ deployment.label }}</label>
+					</div>
+				</div>
+			</div>
+			<div class="tech-box monitoring">
+				<div class="title">App Monitoring</div>
+				<div class="options">
+					<div ng-repeat="monitor in monitors">
+						<input
+							id="monitor{{ monitor.id }}"
+						    type="checkbox"
+						    name="monitor[]"
+						    value="{{ monitor.id }}"
+						    ng-checked="isInList(mv.project.tools.monitoring, monitor)">
+						<label for="monitor{{ monitor.id }}">{{ monitor.label }}</label>
+					</div>
+				</div>
+			</div>
+			<div class="tech-box trackingSystems">
+				<div class="title">Issue Tracking</div>
+				<div class="options">
+					<div ng-repeat="tracker in trackingSystems">
+						<input
+							id="tracker{{ tracker.id }}"
+						    type="checkbox"
+						    name="issueTracker[]"
+						    value="{{ tracker.id }}"
+						    ng-checked="isInList(mv.project.tools.issueTracker, tracker)">
+						<label for="tracker{{ tracker.id }}">{{ tracker.label }}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="nav next-button">
+  			<a ng-href="#">NEXT</a>
+      	</div>
+      	<div class="nav finish-button">
+  			<a ng-click="onFinish()">FINISH</a>
+      	</div>
+	</div>
+</div>

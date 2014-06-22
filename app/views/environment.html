@@ -1,0 +1,41 @@
+<div class="env-main">
+	<aside>
+		<div class="project" ng-style="{ 'background-color': mv.project.color }">
+			<div class="title-and-icon">
+				<div class="title">{{ mv.project.title }}</div>
+				<div class="icon" ng-show="project.icon">
+					<img ng-src="{{ mv.project.icon }}"/>
+				</div>
+			</div>
+			<div class="project-info">
+					<div>Last modified: {{ mv.project.lastModified | amDateFormat:'M/DD/YY h:mm':'unix'  }}</div>
+					<div>Pending tasks: {{ mv.project.pendingTasks }}</div>
+				<div>
+					<div class="last-build">Last build: {{ mv.project.lastBuild | amDateFormat:'M/DD/YY h:mm':'unix' }}</div>
+					<div class="build-success" ng-show="mv.project.buildSuccess">{{ mv.project.buildSuccess | success }}</div>
+				</div>
+			</div>
+			<div class="indicators">
+				<img ng-src="/images/ge/indicators.png"/>
+			</div>
+			<div class="project-info-footer">
+				<nav class="project-actions">
+		        	<ul>
+			          <li><a ng-href="#"><i class="icon-project-dashboard"></i></a></li>
+			          <li><a ng-href="/env-page"><i class="icon-project-cloud"></i></a></li>
+			          <li><a ng-href="#"><i class="icon-project-settings"></i></a></li>
+			        </ul>
+		      	</nav>
+		      	<div class="project-progress">
+	      			<div class="progress-bar" ng-style="{ width: mv.project.progress * 100 + '%' }"></div>
+		      	</div>
+		      	<div class="code-button">
+		      		<a ng-href="#">CODE</a>
+		      	</div>
+			</div>
+		</div>
+	</aside>
+	<main>
+
+	</main>
+</div>
